@@ -1,0 +1,33 @@
+<section class="dish-container">
+    <header class="dish-container__header">
+        <img src="img/{{dish.img_name}}" alt="{{dish.short_desc}}">
+    </header>
+    <h1 class="dish-container__dish-name">{{dish.name}}</h1>
+    <section class="dish-container__desc">
+        <div class="dish-container__desc__info">
+            <p>{{dish.long_desc}}</p>
+            {{#if filters}}
+            <div class="dish-container__desc__info--criteria">
+        
+                <p>Based on: </p>
+            <ul>
+                {{#each filters}}
+                <li>{{this}},</li>
+                {{/each}}
+            </ul>
+            </div>
+            {{/if}}
+        </div>
+        <aside class="dish-container__desc__interaction">
+            <h3>{{dish.price}}</h3>
+            <ul class="dish-container__desc__interaction__allergens">
+                {{#each dish.allergens}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+            <div>
+            <button class="add-button">+</button>
+            </div>
+        </aside>
+    </section>
+</section>

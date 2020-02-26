@@ -1,0 +1,18 @@
+type_id;name;short_desc;long_desc;allergens;price;img_name;type;course;diet;     
+0;Hamburger;Beef burger with fries;100% USA Approved Beef on a sesame bun with french fries from potatoes grown in Ireland;gluten,sesame,soy;10.50€;burger.jpeg;food;hot,main;none;    
+1;Rice;It's just rice;Rice grown in Japan;none;2.50€;white-rice.jpg;food;hot;vegan;  
+2;Pork burger;Pork burger with fries;Austrian grown pork burger with fries from Irish potatoes;gluten;10.50€;burger.jpeg;food;hot,main;none;  
+3;Buffalo Wings;Chicken wings with fries;Chicken wings covered in a spicy buffalo sauce served with fries;milk;9.00€;buffalo-wings.jpg;food;spicy,hot,main;none;  
+4;Filet Mignon;Filet Mignon with mashed potatoes;Filet Mignon steak with herbed butter and mashed potatoes;none;22.00€;filet-mignon.jpg;food;hot,main;none;  
+5;Zucchini Penne Pasta;Penne pasta noodle with zucchini;Penne pasta with zucchini;gluten;12.00€;penne-pasta.jpg;food;hot,main;vegan;  
+6;Chocolate Cake;Chocolate cake;Rich chocolate cake dessert;milk,egg;6.00€;chocolate-cake.jpg;food;cold,dessert,sweet;vegetarian;  
+7;Beer;Tasty and freshly brewed alcohol;Beer brewed in Klagenfurt;gluten;3.90€;beer.jpg;drink;none;vegan;  
+8;Tea;Tasty and freshly brewed tea;Good ol' British Tea;none;4.90€;tea.jpeg;drink;none;vegan;  
+9;Red Wine;A dry wine;Dry wine alcohol from Northern Italy;none;5.40€;wine.jpg;drink;none;vegan;  
+10;Caesar Salad;A caesar salad;A caesar salad with croutons and parmesan cheese;milk,gluten;7.50€;caesar-salad.jpg;food;cold;vegetarian;  
+11;French Onion Soup;French onion soup;French onion soup made from genuine French;milk;4.50€;french-onion-soup.jpg;food;hot,soup;vegetarian;  
+12;Sweet & Sour Chicken;Sweet & sour chicken;An original Sweet & Sour chicken recipe;gluten,nuts;6.70€;sweet-sour-chicken.jpg;food;hot,sweet,sour,main;none;
+13;Peanut Butter & Jelly Sandwich;Peanut Butter & Jelly Sandwich;Just like how mom used to make it;peanuts,gluten;99.99€;peanut-butter-jelly.jpg;food;main,umami;vegan;  
+14;Chicken & Waffles;Fried chicken & waffles;A delightful American meal that is better than all other food;gluten,milk;13.50€;chicken-waffle.jpg;food;sweet,hot,main,umami;none;
+15;Vanilla Ice Cream;Vanilla ice cream;A sweet dessert to finish your evening with;milk;3.50€;vanilla-ice-cream.jpg;food;sweet,cold;vegetarian;  
+16;Orange Juice;Orange juice; Orange juice from the great state of Florida;none;2.00€;orange-juice.jpg;drink;none;vegan;

@@ -1,0 +1,31 @@
+<section class="shopping-cart">
+    <header class="shopping-cart__heading">
+        <h1>Current choice</h1>
+        </header>
+    {{#if cart}}
+    <ul class="shopping-cart__content">
+        {{#each cart}}
+        <li> 
+        <a href="#dish/{{type_id}}" class="sidemenu__dishlist__menu-item shopping-cart__item">
+            <div class="sidemenu__dishlist__menu-item__image">
+                <img src="img/{{img_name}}" alt="{{short_desc}}">
+            </div>
+            <div class="sidemenu__dishlist__menu-item__text">
+                <h3>{{name}}</h3>
+                <p>{{short_desc}}</p>
+            </div>
+            <div class="sidemenu__dishlist__menu-item__interaction">
+                <p><strong>{{price}}</strong></p>
+                <div><button role="button" data-dishnum={{type_id}} class="remove-button">-</button></div>
+            </div>
+        {{#if count }}
+            <span class="shopping-cart__counter"><strong>{{count}}x</strong></span>
+        {{/if}}
+        </a>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+    <a href="#" class="shopping-cart__restart">Restart</a>
+
+</section>

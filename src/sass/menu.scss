@@ -1,0 +1,210 @@
+@import "menu-item";
+
+.menupage-container {
+  display: flex;
+  flex-direction: row;
+}
+.sidemenu {
+  position: relative;
+  height: 100vh;
+
+  box-shadow: black 0 0 5px;
+  overflow-y: scroll;
+  flex-basis: $right-width;
+  background-color: $main-color;
+  z-index: 10;
+  ul {
+    list-style-type: none;
+  }
+  &__header {
+    position: fixed;
+    width: $right-width;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color: $secondary-color;
+
+    &__btn {
+      width: 100%;
+
+      text-align: center;
+      color: white;
+      background-color: $navigation-color;
+      border-radius: 5px;
+      font-size: 25px;
+      padding: 0.5rem;
+      margin: 1rem;
+      span {
+        display: inline-block;
+        width: 20px;
+        margin-right: 1rem;
+      }
+    }
+  }
+  &__dishlist {
+    padding-top: 6rem;
+  }
+}
+.active-dish {
+  border: 5px $secondary-color solid;
+  box-shadow: 0 6px 8px black;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.options-container {
+  flex-basis: $left-width;
+  background-image: url("../img/menu-bg.jpg");
+  background-size: cover;
+
+  padding-top: 6rem;
+
+  &__pot-container {
+    position: absolute;
+    bottom: 10px;
+
+    height: 35%;
+    width: $left-width;
+
+    background-image: url("../img/pot.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    color: white;
+
+    &__ingredients {
+      text-align: center;
+      margin-top: 2rem;
+      h3 {
+        font-family: $header-font;
+        margin: 0;
+      }
+      li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      button {
+        background-color: red;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        color: white;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+.restart-button {
+  display: block;
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  bottom: 1rem;
+  left: 1rem;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: $main-color;
+}
+
+@media only screen and (max-width: 730px) {
+  .menupage-container {
+    flex-direction: column;
+  }
+  .navbar {
+    width: 100% !important;
+    z-index: 20;
+  }
+  .options-container {
+    &__pot-container {
+      position: relative;
+      width: 100%;
+      height: 15rem;
+
+      h3 {
+        font-size: 15px;
+        padding-top: 1rem;
+      }
+    }
+  }
+  .sidemenu {
+    height: auto;
+    overflow-y: unset;
+    &__header {
+      position: static;
+      width: 100%;
+    }
+    &__dishlist {
+      padding-top: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .optionsmenu {
+      &__categories{
+          &__category{
+              width: 90%;
+              height: 90%;
+          }
+          &__container{
+              width: calc(100% / 3);
+          }
+      }
+    &__options {
+      &__item {
+          width: 4rem;
+          height: 4rem;
+      }
+    }
+  }
+  .shopping-cart{
+      &__content{
+        padding-left: 0;
+      }
+    }
+//   .restart-button{
+//       bottom: 2rem;
+//   }
+
+.dish-container__dish-name{
+    font-size: 30px;
+}
+.welcome-page__middle-column__search-box__search-button{
+    height: 3rem;
+}
+}
+
+@media only screen and (max-width: 350px) {
+
+    .optionsmenu {
+        &__categories{
+            &__category{
+                width: 90%;
+                height: 90%;
+            }
+            &__container{
+                width: calc(100% / 3);
+            }
+        }
+      &__options {
+        &__item {
+            width: 3rem;
+            height: 3rem;
+            font-size: 6px;
+            font-family: $main-font;
+        }
+      }
+    }
+
+
+.optionsmenu__categories__category h2{
+    padding: 2px;
+}
+}

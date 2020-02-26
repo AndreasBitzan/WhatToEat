@@ -1,0 +1,274 @@
+.optionsmenu {
+  &__content-wrapper {
+    section {
+      display: none;
+    }
+  }
+
+  &__tabs-wrapper {
+    input[name="tab-control"] {
+      display: none;
+    }
+    input[name="tab-control"]:nth-of-type(1):checked ~ ul > li:nth-child(1) {
+      background-color: $main-color;
+    }
+    input[name="tab-control"]:nth-of-type(2):checked ~ ul > li:nth-child(2) {
+      background-color: $main-color;
+    }
+    input[name="tab-control"]:nth-of-type(3):checked ~ ul > li:nth-child(3) {
+      background-color: $main-color;
+    }
+
+    input[name="tab-control"]:nth-of-type(1):checked
+      ~ .optionsmenu__content-wrapper
+      > section:nth-child(1) {
+      display: block;
+    }
+    input[name="tab-control"]:nth-of-type(2):checked
+      ~ .optionsmenu__content-wrapper
+      > section:nth-child(2) {
+      display: block;
+    }
+    input[name="tab-control"]:nth-of-type(3):checked
+      ~ .optionsmenu__content-wrapper
+      > section:nth-child(3) {
+      display: block;
+    }
+  }
+
+  &__categories {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .active-category {
+      background-color: $main-color;
+    }
+
+    &__container {
+      width: calc(100% / 4);
+      height: 9rem;
+
+      display: flex;
+      align-items: center;
+      background-size: cover;
+      color: white;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+
+      &:nth-of-type(1) {
+        justify-content: flex-start;
+        padding-left: 1rem;
+        margin-left: 1rem;
+      }
+      &:nth-of-type(2) {
+        justify-content: center;
+      }
+      &:nth-of-type(3) {
+        justify-content: flex-end;
+        padding-right: 1rem;
+        margin-right: 1rem;
+      }
+    }
+
+    &__category {
+      width: 80%;
+      height: 80%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      cursor: pointer;
+      background-size: cover;
+      //padding-bottom: calc(100% / 5);
+
+      h2 {
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+      }
+    }
+
+    &__meat {
+      background-image: url("../img/meat-bg.jpeg");
+    }
+    &__sides {
+      background-image: url("../img/potatoes-bg.jpeg");
+    }
+    &__dishtype {
+      background-image: url("../img/pot-bg.jpeg");
+    }
+    &__tea {
+      background-image: url("../img/tea.jpeg");
+    }
+    &__juice {
+      background-image: url("../img/juice.jpg");
+    }
+    &__alcohol {
+      background-image: url("../img/wine.jpg");
+    }
+  }
+
+  &__options {
+    color: white;
+    font-family: $header-font;
+
+    margin-right: 1rem;
+    margin-left: 1rem;
+
+    padding-top: 1rem;
+    padding-right: 0;
+    padding-bottom: 1rem;
+    padding-left: 0;
+
+    background-color: $main-color;
+
+    &--line {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    &--line:not(:first-child) {
+      margin-top: 1rem;
+    }
+
+    &__item {
+      position: relative;
+      width: 5rem;
+      height: 5rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      background-color: $main-color;
+      background-size: cover;
+
+      border-radius: 5px;
+
+      &::before {
+        position: absolute;
+
+        content: " ";
+        width: 100%;
+        height: 100%;
+
+        background-color: black;
+        opacity: 0.4;
+        z-index: 1;
+      }
+      h3 {
+        z-index: 2;
+      }
+      &--meat {
+        background-image: url("../img/options/meat_small.jpg");
+      }
+      &--potatoes {
+        background-image: url("../img/options/potatoes2.jpeg");
+      }
+      &--fries {
+        background-image: url("../img/options/fries.jpeg");
+      }
+      &--rice {
+        background-image: url("../img/options/rice.jpeg");
+      }
+      &--noodles {
+        background-image: url("../img/options/noodles.jpeg");
+      }
+      &--spaetzle {
+        background-image: url("../img/options/spaetzle.jpg");
+      }
+      &--veggie {
+        background-image: url("../img/options/veggie.jpeg");
+      }
+      &--salad {
+        background-image: url("../img/options/salad.jpeg");
+      }
+      &--couscous {
+        background-image: url("../img/options/couscous.jpeg");
+      }
+      &--quinoa {
+        background-image: url("../img/options/quinoa.jpeg");
+      }
+      &--bread {
+        background-image: url("../img/options/bread.jpeg");
+      }
+      &--spicy {
+        background-image: url("../img/options/spicy.jpg");
+      }
+      &--hot {
+        background-image: url("../img/options/hot.jpg");
+      }
+      &--cold {
+        background-image: url("../img/options/cold.jpg");
+      }
+      &--dessert {
+        background-image: url("../img/options/dessert.jpg");
+      }
+      &--main {
+        background-image: url("../img/options/main.jpg");
+      }
+      &--soup {
+        background-image: url("../img/options/soup.jpg");
+      }
+      &--sweet {
+        background-image: url("../img/options/sweet.jpg");
+      }
+      &--salty {
+        background-image: url("../img/options/salty.jpg");
+      }
+      &--sour {
+        background-image: url("../img/options/sour.jpg");
+      }
+      &--savoury {
+        background-image: url("../img/options/savoury.jpg");
+      }
+      &--pork {
+        background-image: url("../img/options/pork.jpg");
+      }
+      &--turkey {
+        background-image: url("../img/options/turkey.jpg");
+      }
+      &--chicken {
+        background-image: url("../img/options/chicken.jpg");
+      }
+      &--beef {
+        background-image: url("../img/options/beef.jpg");
+      }
+      &--venison {
+        background-image: url("../img/options/venison.jpg");
+      }
+      &--salmon {
+        background-image: url("../img/options/salmon.jpg");
+      }
+      &--trout {
+        background-image: url("../img/options/trout.jpg");
+      }
+      &--sausage {
+        background-image: url("../img/options/sausage.jpg");
+      }
+      &--lamb {
+        background-image: url("../img/options/lamb.jpg");
+      }
+      &--organic {
+        background-image: url("../img/options/organic.jpg");
+      }
+    }
+  }
+}
+
+.active-option-item {
+  border: 5px solid $secondary-color;
+
+  h3 {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    padding: 2px;
+  }
+  &::before {
+    content: none;
+  }
+}

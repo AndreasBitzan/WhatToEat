@@ -1,0 +1,28 @@
+<div class="sidemenu__header">
+    <a class="sidemenu__header__btn sidemenu__header__btn--food" role="button" href="#menu">
+        <span>
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pizza-slice" class="svg-inline--fa fa-pizza-slice fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M158.87.15c-16.16-1.52-31.2 8.42-35.33 24.12l-14.81 56.27c187.62 5.49 314.54 130.61 322.48 317l56.94-15.78c15.72-4.36 25.49-19.68 23.62-35.9C490.89 165.08 340.78 17.32 158.87.15zm-58.47 112L.55 491.64a16.21 16.21 0 0 0 20 19.75l379-105.1c-4.27-174.89-123.08-292.14-299.15-294.1zM128 416a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm48-152a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm104 104a32 32 0 1 1 32-32 32 32 0 0 1-32 32z"></path></svg>
+        </span>Food</a>
+    <a class="sidemenu__header__btn sidemenu__header__btn--drinks" role="button" href="#drinks"><span>
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="wine-bottle" class="svg-inline--fa fa-wine-bottle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M507.31 72.57L439.43 4.69c-6.25-6.25-16.38-6.25-22.63 0l-22.63 22.63c-6.25 6.25-6.25 16.38 0 22.63l-76.67 76.67c-46.58-19.7-102.4-10.73-140.37 27.23L18.75 312.23c-24.99 24.99-24.99 65.52 0 90.51l90.51 90.51c24.99 24.99 65.52 24.99 90.51 0l158.39-158.39c37.96-37.96 46.93-93.79 27.23-140.37l76.67-76.67c6.25 6.25 16.38 6.25 22.63 0l22.63-22.63c6.24-6.24 6.24-16.37-.01-22.62zM179.22 423.29l-90.51-90.51 122.04-122.04 90.51 90.51-122.04 122.04z"></path></svg>
+    </span>Drinks</a>
+</div>
+<ul class="sidemenu__dishlist">
+    {{#each menuitems}}
+    <li>
+        <a href="#dish/{{type_id}}" id="item_{{type_id}}" class="sidemenu__dishlist__menu-item">
+            <div class="sidemenu__dishlist__menu-item__image">
+                <img src="img/{{img_name}}" alt="{{short_desc}}">
+            </div>
+            <div class="sidemenu__dishlist__menu-item__text">
+                <h3>{{name}}</h3>
+                <p>{{short_desc}}</p>
+            </div>
+            <div class="sidemenu__dishlist__menu-item__interaction">
+                <p><strong>{{price}}</strong></p>
+                <div><button role="button" data-dishnum={{type_id}} class="add-button">+</button></div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</ul>

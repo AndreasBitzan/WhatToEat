@@ -1,0 +1,376 @@
+.logo {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.welcome-page {
+  height: 100vh;
+  display: flex;
+  position: relative;
+
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+  background-image: url("../img/welcomeBg.jpg");
+  background-size: cover;
+
+  color: white;
+
+  margin: 0;
+
+  &__left-column {
+    position: absolute;
+    max-width: 33%;
+    left: 0;
+    height: 100%;
+
+    width: 100%;
+    overflow-y: scroll;
+    background-color: $main-color;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: left;
+
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    &__allergens-list {
+      display: block;
+      position: relative;
+      padding-left: 2rem;
+      font-size: 22px;
+
+      li {
+        list-style: none;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid white;
+      }
+
+      &__checkbox {
+        display: flex;
+        justify-content: space-between;
+
+        &__checkmark {
+          -webkit-appearance: none;
+          background-color: white;
+          width: 1rem;
+          height: 1rem;
+          border-radius: 5px;
+          display: inline-block;
+          position: relative;
+
+          &:checked {
+            background-color: $secondary-color;
+            color: white;
+          }
+
+          &:checked:after {
+            content: "\2714";
+            font-size: 14px;
+            position: absolute;
+            bottom: -1px;
+            left: 3px;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  &__middle-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    flex-basis: 33%;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+
+    &__welcome-statement {
+      width: 100%;
+      align-self: flex-start;
+
+      h1 {
+        font-size: 75px;
+        font-family: Arial, sans-serif;
+
+        margin: 0;
+      }
+      h2 {
+        margin: 0;
+      }
+    }
+    input[type="text"] {
+      height: 3rem;
+      width: 100%;
+      border-radius: 5px;
+      text-align: center;
+
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+      border-bottom: 0;
+
+      background-color: rgba(192, 192, 192, 0.25);
+      color: white;
+    }
+    ::placeholder {
+      color: white;
+      opacity: 1;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    &__search-box {
+      border-radius: 5px;
+
+      &__checkbox {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        input {
+          display: inline-block;
+        }
+
+        &__checkmark {
+          -webkit-appearance: none;
+
+          background-color: transparent;
+          border: 3px solid white;
+          cursor: pointer;
+          width: 2rem;
+          height: 2rem;
+          border-radius: 5px;
+          display: inline-block;
+          position: relative;
+
+          &:checked {
+            background-color: $secondary-color;
+            color: white;
+            border: none;
+          }
+
+          &:checked:after {
+            content: "\2714";
+            font-size: 1.5rem;
+            position: absolute;
+            color: white;
+            left: 20%;
+          }
+        }
+      }
+
+      &__search-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 5rem;
+        width: 100%;
+
+        border-radius: 5px;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-bottom: 0;
+
+        font-size: 1.5rem;
+
+        background-color: $secondary-color;
+        color: white;
+      }
+    }
+
+    &__bottom-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      div {
+        width: 45%;
+        cursor: pointer;
+      }
+
+      button {
+        width: 100%;
+        cursor: pointer;
+        border-radius: 5px;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-bottom: 0;
+        padding: 1rem;
+        font-size: 1.5rem;
+        background-color: $navigation-color;
+        color: white;
+      }
+    }
+  }
+  &__right-column {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    width: 100%;
+
+    background-color: $main-color;
+
+    position: absolute;
+    max-width: 33%;
+    right: 0;
+    height: 100%;
+    z-index: 2;
+
+    &__deal-of-the-day {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+
+      h3 {
+        margin-bottom: 20%;
+        font-size: 1rem;
+      }
+
+      &__add-button {
+        font-size: 2rem;
+        border-radius: 5px;
+
+        background-color: $add-color;
+
+        padding-top: 0px;
+        padding-right: 10px;
+        padding-bottom: 0px;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+.invisible-sidebar {
+  display: none;
+}
+.allergen--wrapper {
+  display: flex;
+}
+.allergen--test {
+  width: 1.5rem;
+  height: 100%;
+  display: inline-block;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  margin-right: 1rem;
+}
+.allergen--egg {
+  background-image: url("../img/allergens-egg.png");
+}
+.allergen--fish {
+  background-image: url("../img/allergens-fish.png");
+}
+.allergen--gluten {
+  background-image: url("../img/allergens-gluten.png");
+}
+.allergen--celery {
+  background-image: url("../img/allergens-celery.png");
+}
+.allergen--lupin {
+  background-image: url("../img/allergens-lupines.png");
+}
+.allergen--milk {
+  background-image: url("../img/allergens-milk.png");
+}
+.allergen--mollusks {
+  background-image: url("../img/allergens-mollusks.png");
+}
+.allergen--mustard {
+  background-image: url("../img/allergens-mustard.png");
+}
+.allergen--nuts {
+  background-image: url("../img/allergens-nuts.png");
+}
+.allergen--peanuts {
+  background-image: url("../img/allergens-peanut.png");
+}
+.allergen--sesame {
+  background-image: url("../img/allergens-sesame.png");
+}
+.allergen--shellfish {
+  background-image: url("../img/allergens-shellfish.png");
+}
+.allergen--soy {
+  background-image: url("../img/allergens-soy.png");
+}
+.allergen--sulfur {
+  background-image: url("../img/allergens-sulfur.png");
+}
+.close-sidebar {
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+  background-color: transparent;
+  color: rgba($color: #fff, $alpha: 0.6);
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.highlight-checkbox {
+  background-color: $navigation-color;
+}
+
+@media only screen and (max-width: 1100px) {
+  .welcome-page {
+    &__left-column {
+      h2 {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 730px) {
+    .logo {
+        position: absolute;
+        right: 0;
+        left:0;
+
+        text-align: center;
+
+        margin-left: auto;
+        margin-right: auto;
+      
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+    .welcome-page {
+      &__left-column {
+          z-index: 2;
+        max-width: 100%;
+      }
+      &__right-column{
+          max-width: 100%;
+          h3{
+              margin-bottom: 10%;
+          }
+      }
+    }
+  }

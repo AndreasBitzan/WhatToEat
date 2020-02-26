@@ -1,0 +1,138 @@
+<figure class="logo">
+        <img src="img/logo.png">
+</figure>
+<div class="welcome-page">
+    <div class="welcome-page__left-column invisible-sidebar">
+        <h2>I am allergic to..</h2>
+        <ul class="welcome-page__left-column__allergens-list">
+            <li>
+                <label class="welcome-page__left-column__allergens-list__checkbox">
+                    <span class="allergen--wrapper"><span class="allergen--test allergen--gluten"></span>Gluten</span>
+                    <input type="checkbox" data-allergen="gluten" class="welcome-page__left-column__allergens-list__checkbox__checkmark">
+                </label>
+            </li>
+            <li>
+                <label class="welcome-page__left-column__allergens-list__checkbox">
+                    <span class="allergen--wrapper"><span class="allergen--test allergen--shellfish"></span>Shellfish</span>
+                    <input type="checkbox" data-allergen="shellfish" class="welcome-page__left-column__allergens-list__checkbox__checkmark">
+                </label>
+            </li>
+            <li>
+                <label class="welcome-page__left-column__allergens-list__checkbox">
+                    <span class="allergen--wrapper"><span class="allergen--test allergen--egg"></span>Egg</span> 
+                    <input type="checkbox" data-allergen="egg" class="welcome-page__left-column__allergens-list__checkbox__checkmark">
+                </label>
+            </li>
+            <li>
+                <label class="welcome-page__left-column__allergens-list__checkbox">
+                    <span class="allergen--wrapper"><span class="allergen--test allergen--fish"></span>Fish</span>
+                    <input data-allergen="fish" type="checkbox" class="welcome-page__left-column__allergens-list__checkbox__checkmark">
+                </label>
+            </li>
+            <li>
+                <label class="welcome-page__left-column__allergens-list__checkbox">
+                    <span class="allergen--wrapper"><span class="allergen--test allergen--peanuts"></span>Peanuts</span>
+                    <input data-allergen="peanuts" type="checkbox" class="welcome-page__left-column__allergens-list__checkbox__checkmark">
+                </label>
+            </li>
+            <li>
+                
+                <label class="welcome-page__left-column__allergens-list__checkbox">
+                    <span class="allergen--wrapper"><span class="allergen--test allergen--soy"></span>Soy</span>
+                    <input type="checkbox" data-allergen="soy" class="welcome-page__left-column__allergens-list__checkbox__checkmark">
+                </label>
+            </li>
+            <li>
+                <label class="welcome-page__left-column__allergens-list__checkbox">
+                   <span class="allergen--wrapper"><span class="allergen--test allergen--milk"></span>Milk</span>
+                    <input type="checkbox" data-allergen="milk" class="welcome-page__left-column__allergens-list__checkbox__checkmark">
+                </label>
+            </li>
+            <li>
+                <label class="welcome-page__left-column__allergens-list__checkbox">
+                    <span class="allergen--wrapper"><span class="allergen--test allergen--nuts"></span>Nuts</span>
+                    <input type="checkbox" data-allergen="nuts" class="welcome-page__left-column__allergens-list__checkbox__checkmark">
+                </label>
+            </li>
+            <li>
+                <label class="welcome-page__left-column__allergens-list__checkbox">
+                   <span class="allergen--wrapper"><span class="allergen--test allergen--celery"></span>Celery</span>
+                    <input type="checkbox" data-allergen="celery" class="welcome-page__left-column__allergens-list__checkbox__checkmark">
+                </label>
+            </li>
+            <li>
+                <label class="welcome-page__left-column__allergens-list__checkbox">
+                    <span class="allergen--wrapper"><span class="allergen--test allergen--mustard"></span>Mustard</span>
+                    <input type="checkbox" data-allergen="mustard" class="welcome-page__left-column__allergens-list__checkbox__checkmark">
+                </label>
+            </li>
+            <li>
+                <label class="welcome-page__left-column__allergens-list__checkbox">
+                    <span class="allergen--wrapper"><span class="allergen--test allergen--sesame"></span>Sesame</span>
+                    <input type="checkbox" data-allergen="sesame" class="welcome-page__left-column__allergens-list__checkbox__checkmark">
+                </label>
+            </li>
+            <li>
+                <label class="welcome-page__left-column__allergens-list__checkbox">
+                    <span class="allergen--wrapper"><span class="allergen--test allergen--sulfur"></span>Sulfur</span>
+                    <input type="checkbox" data-allergen="sulfur" class="welcome-page__left-column__allergens-list__checkbox__checkmark">
+                </label>
+            </li>
+            <li>
+                <label class="welcome-page__left-column__allergens-list__checkbox">
+                   <span class="allergen--wrapper"><span class="allergen--test allergen--lupin"></span>Lupin</span>
+                    <input type="checkbox" data-allergen="lupin" class="welcome-page__left-column__allergens-list__checkbox__checkmark">
+                </label>
+            </li>
+            <li>
+                <label class="welcome-page__left-column__allergens-list__checkbox">
+                    <span class="allergen--wrapper"><span class="allergen--test allergen--mollusks"></span>Mollusks</span>
+                    <input type="checkbox" data-allergen="mollusks" class="welcome-page__left-column__allergens-list__checkbox__checkmark">
+                </label>
+            </li>
+        </ul>
+        <button class="close-sidebar">x</button>
+    </div>
+    <div class="welcome-page__middle-column">
+        <div class="welcome-page__middle-column__welcome-statement">
+            <h1>Welcome</h1>
+            <h2>to a Demo Restaurant</h2>
+        </div>
+        {{!-- <form class="welcome-page__middle-column__search-box" action="#menu"> --}}
+            <input type="text" placeholder="Search..." 
+            onfocus="this.placeholder = ''"
+            onblur="this.placeholder = 'Search...'"
+             name="search" class="welcome-page__search-input" autocomplete="off">
+            <label class="welcome-page__middle-column__search-box__checkbox">
+                <span>I am Vegetarian</span>
+                <input type="checkbox" class="welcome-page__middle-column__search-box__checkbox__checkmark welcome-page__middle-column__search-box__checkbox__checkmark--veggie">
+            </label>
+            <label class="welcome-page__middle-column__search-box__checkbox">
+                <span>I am Vegan</span>
+                <input type="checkbox" class="welcome-page__middle-column__search-box__checkbox__checkmark welcome-page__middle-column__search-box__checkbox__checkmark--vegan">
+            </label>
+            <a href="#menu" class="welcome-page__middle-column__search-box__search-button">Open Menu</a>
+        {{!-- </form> --}}
+        <div class="welcome-page__middle-column__bottom-buttons">
+            <div class="welcome-page__middle-column__bottom-buttons__allergens-button">
+                <button role="button" id="allergens-button">Allergens</button>
+            </div>
+            <div class="welcome-page__middle-column__bottom-buttons__deal-button">
+                <button role="button" id="deal-button">Daily deal</button>
+            </div>
+        </div>
+    </div>
+    <div class="welcome-page__right-column invisible-sidebar">
+        <h2>Deal of the Day</h2>
+        <div class="welcome-page__right-column__deal-of-the-day">
+            <h3>Pumpkin Cream Soup</h3>
+            <h3>Spaghetti Carbonara</h3>
+            <h3>Vanilla Pudding</h3>
+            <h3>13,50€</h3>
+            {{!-- <div class="welcome-page__right-column__deal-of-the-day__add-button">
+                <a href="#cart">+</a>
+            </div> --}}
+        </div>
+        <button class="close-sidebar close-deal">x</button>
+    </div>
+</div>

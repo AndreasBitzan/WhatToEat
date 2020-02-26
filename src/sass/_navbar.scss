@@ -1,0 +1,65 @@
+.navbar{
+    transition: all 0.2s linear;
+    position: fixed;
+    width: $left-width;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 1rem;
+
+    &__icon-wrapper{
+        background-color: $secondary-color;
+    }
+
+    &__item{
+        position: relative;
+        height: 50px;
+        width: 50px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+        color: white;
+        border:none;
+        
+        &__counter{
+            position: absolute;
+            bottom: -5px;
+            right: -10px;
+
+            display: block;
+
+            border-radius: 50%;
+
+            font-size: 0.8rem;
+            background-color: $add-color;
+
+            padding-top: 5px;
+            padding-right: 8px;
+            padding-bottom: 5px;
+            padding-left: 8px;
+        }
+
+        svg{
+            width: 30px;
+           // height: 50px;
+        }
+        img{
+            max-width: 80px;
+
+            padding: 0;
+        }
+        a{
+            color: white;
+        }
+        &:active{
+            transform: scale(1.2); 
+        }
+    }
+}
+
+.scrolled-navbar{
+    background-color: $main-color;
+}
